@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9145e4c-4517-40d9-87d8-9867ff657ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AEMET.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/estaciones_meteorologicas.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/estaciones_meteorologicas_normalizada.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/fires-all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/fires_join_metEstation.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires.qpj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires_join_metEstation.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires_join_metEstation.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires_join_metEstation.qpj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires_join_metEstation.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/fires_join_metEstation.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/neares.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/neares.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/neares.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shp/neares.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/spatial_join.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/notas.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/.ipynb_checkpoints/EstacionesNormalizadas-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/AEMET.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/EstacionesNormalizadas.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Extract.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/MODIS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Utilidades.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/IGN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/.ipynb_checkpoints/ExtractAemet-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/source/.ipynb_checkpoints/ExtractAemet-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/AEMET.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/AEMET.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ExtractAemet.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/source/ExtractAemet.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ExtractModis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/source/ExtractModis.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/AEMET.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -57,40 +30,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/MODIS.py">
+        <entry file="file://$PROJECT_DIR$/source/IGN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/_strptime.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="361" selection-start-line="361" selection-end-line="361" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/json/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="342" selection-start-line="342" selection-end-line="342" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Utilidades.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="257">
+              <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -98,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/Extract.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/MODIS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="289">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -110,11 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/io/common.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/Utilidades.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="231" selection-start-line="231" selection-end-line="231" />
+            <state relative-caret-position="51">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Extract.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -128,6 +83,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lat</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lon</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -139,9 +102,10 @@
         <option value="$PROJECT_DIR$/AEMET.py" />
         <option value="$PROJECT_DIR$/source/Utilidades.py" />
         <option value="$PROJECT_DIR$/Extract.py" />
-        <option value="$PROJECT_DIR$/source/AEMET.py" />
         <option value="$PROJECT_DIR$/source/MODIS.py" />
         <option value="$PROJECT_DIR$/source/Extract.py" />
+        <option value="$PROJECT_DIR$/source/AEMET.py" />
+        <option value="$PROJECT_DIR$/source/IGN.py" />
       </list>
     </option>
   </component>
@@ -197,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Extract">
+  <component name="RunManager" selected="Python.IGN">
     <configuration name="AEMET" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AEMET" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -232,6 +196,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/Extract.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="IGN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AEMET" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/IGN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,6 +269,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.IGN" />
         <item itemvalue="Python.Extract" />
         <item itemvalue="Python.MODIS" />
         <item itemvalue="Python.AEMET" />
@@ -306,8 +292,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -315,8 +302,8 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39770868" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39443535" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -339,10 +326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/io/common.py">
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/_strptime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="175">
+          <caret line="361" selection-start-line="361" selection-end-line="361" />
         </state>
       </provider>
     </entry>
@@ -353,49 +340,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/_strptime.py">
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/io/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="361" selection-start-line="361" selection-end-line="361" />
+        <state relative-caret-position="980">
+          <caret line="231" selection-start-line="231" selection-end-line="231" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/AEMET.py">
+    <entry file="file://$PROJECT_DIR$/source/Extract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/MODIS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="289">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Utilidades.py">
+    <entry file="file://$PROJECT_DIR$/source/IGN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="257">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Extract.py">
+    <entry file="file://$PROJECT_DIR$/source/AEMET.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Utilidades.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

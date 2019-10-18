@@ -46,5 +46,5 @@ def get_datos_meteorologicos_todas(token,initial_date,final_date):
     datos = get_data_AEMET(url, token)
     return datos
 
-
+get_datos_meteorologicos(token,"2015-04-03","2015-04-08","7228")
 
