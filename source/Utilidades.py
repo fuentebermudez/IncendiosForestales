@@ -3,6 +3,7 @@ from datetime import date
 
 def substract_days(i_date,n_days=5):
     try:
+        i_date=str(i_date)
         datea=datetime.datetime.strptime(i_date, "%Y-%m-%d")
     except:
         print("Date fromat error.")

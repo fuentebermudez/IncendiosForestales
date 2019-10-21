@@ -1,44 +1,80 @@
-import numpy as np
 
-from sklearn.linear_model import LinearRegression
+from joblib import dump, load
+
+from sklearn.metrics import mean_squared_error
+
+from sklearn.neighbors import KNeighborsRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import VotingRegressor
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import explained_variance_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import r2_score
+from sklearn.experimental import enable_hist_gradient_boosting
+from sklearn.ensemble import AdaBoostRegressor
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestClassifier
+import Transformer as t
 
-import Transformer as T
 import Extract as e
 
 def train_and_evaluate(clf, X_train, y_train):
+
     clf.fit(X_train, y_train)
+    y_pred=clf.predict(X_train)
+    print("Coefficient of determination on training set:", clf.score(X_train, y_train), "RMSE:", mean_squared_error(y_train, y_pred),
+          explained_variance_score(y_train,y_pred), "R:", r2_score(y_train,y_pred))
 
-    print("Coefficient of determination on training set:", clf.score(X_train, y_train))
+    return clf
 
-    # create a k-fold croos validation iterator of k=5 folds
-    #cv = KFold(X_train.shape[0], 5, shuffle=True, random_state=33)
-    #scores = cross_val_score(clf, X_train, y_train, cv=cv)
-    #print("Average coefficient of determination using 5-fold crossvalidation:", np.mean(scores))
 
-train_path="..\data\cars_train.csv"
-submision_path="..\data\cars_test.csv"
+train_path="..\data\incendios_merge.csv"
 
-cars_prices=e.load_data(train_path)
-cars_prices_test=e.load_data(submision_path)
+incendios=e.load_data(train_path)
 
-cars_prices_t=T.Transform(cars_prices)
-cars_prices_test_t=T.Transform(cars_prices_test)
+PARAMETROS=['cota','lat','lng', 't_max', 't_min','racha', 'vel_media', 'NDVI', 'PENDIENTE','superficie']
+incendios=incendios[PARAMETROS].dropna()
 
-cars_prices_t.dropna(inplace=True)
-PARAMETROS=['year','odometer','condition','cylinders','SUV',
-       'bus', 'convertible', 'coupe', 'hatchback', 'mini-van', 'offroad',
-       'other', 'pickup', 'sedan', 'truck', 'van', 'wagon']
-X=cars_prices_t[PARAMETROS]
-y=cars_prices_t['price']
+X=incendios.drop('superficie',axis=1)
+#X=t.add_clase(incendios)
+#scaler = StandardScaler()
+
+#X=scaler.fit_transform(X)
+X=incendios.drop('superficie',axis=1)
+y=incendios['superficie']
 
 X_train, X_test, Y_train,Y_test=train_test_split(X,y,test_size=0.33,random_state=1)
 
-clf = LinearRegression(normalize=True)
+param_grid_KNN={
+    'n_neighbors': [4,6,8,10,1000],
+    'weights':['distance','uniform']
+}
 
-train_and_evaluate(clf,X_train, Y_train)
+param_grid_SVR={
+    'gamma': ['scale'],
+    'C':[1000],
+    'epsilon':[0.2]
+}
 
+param_grid = {
+    'bootstrap': [True],
+    'max_depth': [80,90,100],
+    'max_features': [2, 3,6],
+    'min_samples_leaf': [2,3],
+    'min_samples_split': [2,4, 10],
+    'n_estimators': [5]
+}# Create a based model
+#clf = RandomForestRegressor()# Instantiate the grid search model
+#clf=SVR()
+clf=KNeighborsRegressor()
+clf = GridSearchCV(estimator = clf, scoring='neg_mean_squared_error',param_grid = param_grid_KNN,
+                          cv = 3, n_jobs = -1, verbose = 2)
 
+clf=train_and_evaluate(clf,X_train, Y_train)
+#clf=train_and_evaluate(clf,X, y)
+
+dump(clf, '../output/models/clf.joblib')
 
 
 
