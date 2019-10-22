@@ -52,8 +52,8 @@ def get_evapotranspiration(lat,lon,initial_date,final_date):
     return ndvi
 
 
-fecha_inicial = format_modis_date(Utilidades.substract_days("2002-01-01"))
-fecha_final = format_modis_date("2002-01-01")
-a=get_evapotranspiration("42.5521829999999","-2.640673",fecha_inicial,fecha_final)
-print(a)
+#fecha_inicial = format_modis_date(Utilidades.substract_days("2002-01-01"))
+#fecha_final = format_modis_date("2002-01-01")
+#a=get_evapotranspiration("42.5521829999999","-2.640673",fecha_inicial,fecha_final)
+#print(a)
 

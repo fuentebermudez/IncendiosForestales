@@ -30,6 +30,8 @@ def get_cotas(mdt_response):
     return merge_altitudes
 
 def get_bounding_box(lat,lon):
+    lat=float(lat)
+    lon=float(lon)
     if lon<0:
         lon_si=lon-0.2
         lon_id=lon+0.2
@@ -54,6 +56,7 @@ def get_pendiente_media(cotas):
 
 
 def get_slope(lat,lng):
+
     bbox = get_bounding_box(lat, lng)
     url="http://servicios.idee.es/wcs-inspire/mdt?SERVICE=WCS&REQUEST=GetCoverage&VERSION=1.0.0&CRS=EPSG:4326&" \
         "BBOX=" + \

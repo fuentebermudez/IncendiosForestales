@@ -1,23 +1,59 @@
+from joblib import dump, load
+import IDRAPI_M
 from tkinter import *
+from tkinter.ttk import *
+from tkinter import scrolledtext
+
+def clicked():
+    conf = IDRAPI_M.load_conf()
+    txt.insert(END, "Obteniendo parametros.\n")
+
+    AemetToken = conf['AEMET_TOKEN'][0]
+    id_estacion_meteorologica=combo.get()
+    latitud=lat.get()
+    longitud=lng.get()
+
+    parametros=IDRAPI_M.get_data_modelo(AemetToken, latitud, longitud, id_estacion_meteorologica)
+    txt.insert(END,  parametros)
+    print(parametros)
+
+
+AemetToken=""
 
 window = Tk()
-
-window.title("Welcome to LikeGeeks app")
+#window.bind( '<Enter>',onFormEvent )
+window.title("IDRAPI")
 
 window.geometry('350x200')
 
-lbl = Label(window, text="Hello")
+txt = Label(window, text="Hello")
+txt.grid(column=0, row=0)
 
-lbl.grid(column=0, row=0)
+lat_lbl=Label(window, text="Lat")
+lat_lbl.grid(sticky=E)
+lat = Entry(window,width=10)
+lat.insert(0, "42.954656")
+lat.grid(column=1, row=1)
 
-
-def clicked():
-    lbl.configure(text="Button was clicked !!")
-
+lng_lbl=Label(window, text="Lng")
+lng_lbl.grid(sticky=E)
+lng = Entry(window,width=10)
+lng.insert(0, "-2.325719")
+lng.grid(column=1, row=2)
 
 btn = Button(window, text="Click Me", command=clicked)
-btn2= Button(window, text="Click Me2", command=clicked)
 
-btn.grid(column=1, row=0)
-btn2.grid(column=2, row=0)
+btn.grid(column=1,rowspan=5)
+
+combo = Combobox(window)
+
+combo['values'] = ("1387E","1475X","8177A")
+
+
+combo.current(1)  # set the selected item
+combo.grid(column=2, row=1)
+
+txt = scrolledtext.ScrolledText(window, width=40, height=5)
+txt.grid(columnspan=3, row=10,padx=5)
+
 window.mainloop()
