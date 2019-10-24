@@ -6,15 +6,15 @@ from tkinter import scrolledtext
 
 def clicked():
     conf = IDRAPI_M.load_conf()
-    txt.insert(END, "Obteniendo parametros.\n")
+    txt.insert(END, "Obteniendo parametros.\n","a")
 
     AemetToken = conf['AEMET_TOKEN'][0]
     id_estacion_meteorologica=combo.get()
     latitud=lat.get()
     longitud=lng.get()
 
-    parametros=IDRAPI_M.get_data_modelo(AemetToken, latitud, longitud, id_estacion_meteorologica)
-    txt.insert(END,  parametros)
+    parametros=IDRAPI_M.get_superficie_quemada(AemetToken, latitud, longitud, id_estacion_meteorologica)
+    txt.insert(END,  parametros,"n")
     print(parametros)
 
 
@@ -45,15 +45,19 @@ btn = Button(window, text="Click Me", command=clicked)
 
 btn.grid(column=1,rowspan=5)
 
+combo_lbl=Label(window, text="Estacion meteórologica.")
+combo_lbl.grid(column=2, row=1)
 combo = Combobox(window)
 
 combo['values'] = ("1387E","1475X","8177A")
 
 
 combo.current(1)  # set the selected item
-combo.grid(column=2, row=1)
+combo.grid(column=2, row=2)
 
 txt = scrolledtext.ScrolledText(window, width=40, height=5)
+txt.tag_config("n", background="yellow", foreground="red")
+txt.tag_config("a", foreground="blue")
 txt.grid(columnspan=3, row=10,padx=5)
 
 window.mainloop()

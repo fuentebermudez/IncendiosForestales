@@ -6,6 +6,7 @@ from APIs import IGN as ign
 import datetime
 import pandas as pd
 import numpy as np
+import webbrowser
 import os
 
 token="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGdWVudGViZXJtdWRlekBnbWFpbC5jb20iLCJqdGkiOiI3MjMzMDA5Yi0zYmUwLTQzMTgtYWIxZC0yMzJmM2Y4YWQxNTYiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTU2MDgwMTczMCwidXNlcklkIjoiNzIzMzAwOWItM2JlMC00MzE4LWFiMWQtMjMyZjNmOGFkMTU2Iiwicm9sZSI6IiJ9.N02GVYXuX9u-FIG5ljUktrDus4elnM-iVG7jthW-eg8"
@@ -66,8 +67,15 @@ def load_model(path_model):
     model=load(path_model)
     return model
 
-def get_superficie_quemada(path_model):
+def get_superficie_quemada(AemetToken,lat,lng,id_estacion_meteorologica,path_model="..\output\models\clf.joblib"):
     model=load_model(path_model="..\output\models\clf.joblib")
+    parametros=get_data_modelo(AemetToken,lat,lng,id_estacion_meteorologica)
+    sup_quemada=model.predict(parametros)
+    return {"sup_quemada":sup_quemada,"parametros":parametros}
 
-#parametros=get_data_modelo(token,'42.954656','-2.325719','1475X')
-#print(parametros)
+def open_url_map():
+    webbrowser.open_new_tab("https://www.google.com/maps/@?api=1&map_action=map&center=42.9531278,-2.3345474&zoom=15&basemap=terrain")
+#sup=get_superficie_quemada(token,'42.954656','-2.325719','1475X')
+#print(sup)
+
+open_url_map()

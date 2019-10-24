@@ -1,5 +1,6 @@
 {
   "AEMET_TOKEN": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGdWVudGViZXJtdWRlekBnbWFpbC5jb20iLCJqdGkiOiI3MjMzMDA5Yi0zYmUwLTQzMTgtYWIxZC0yMzJmM2Y4YWQxNTYiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTU2MDgwMTczMCwidXNlcklkIjoiNzIzMzAwOWItM2JlMC00MzE4LWFiMWQtMjMyZjNmOGFkMTU2Iiwicm9sZSI6IiJ9.N02GVYXuX9u-FIG5ljUktrDus4elnM-iVG7jthW-eg8",
-  "parametros": ["altitud","latitud","longitud","tmax", "tmin","racha", "velmedia", "ndvi", "PENDIENTE"]
+  "parametros": ["altitud","latitud","longitud","tmax", "tmin","racha", "velmedia", "ndvi", "PENDIENTE"],
+  "path_modelo": "..\\output\\models\\clf.joblib"
 
 }
