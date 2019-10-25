@@ -14,8 +14,10 @@ def clicked():
     longitud=lng.get()
 
     parametros=IDRAPI_M.get_superficie_quemada(AemetToken, latitud, longitud, id_estacion_meteorologica)
-    txt.insert(END,  parametros,"n")
+    txt.insert(END,  parametros['sup_quemada'],"n")
     print(parametros)
+
+    IDRAPI_M.open_url_map(latitud,longitud)
 
 
 AemetToken=""
