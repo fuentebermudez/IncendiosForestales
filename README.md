@@ -38,7 +38,9 @@ Ejecutar la aplicación en local requiere:
 
 ### Estructura del proyecto
 
-Use the below for Markdown formatting syntax:
+#### IDRAPI
+
+Contiene la aplicación.
 
 #### Data
 
@@ -54,19 +56,20 @@ En la carpeta datos encontramos los datos que se han usado para entrenar el mode
 Esta carpeta contien los Notebooks que se han utilizado para obtener los datos remotos y para realizar el mergeo de los datos.
 ##### Modelado
 Contiene el script utilizado para testear diferentes modelos de regresión supervisada elegidos y poder elegir el más adecuado.
+##### APIs 
+Contiene los archivos que definen los métodos necesarios para acceder a las diferentes fuentes de datos que se han utilizado para completar los datos de partida y las que permiten a IDRAPI obtener los datos en tiempo real.
+* AEMET.py - Define una serie de métodos que permiten obtener información meteorológica de una estación determinada.
+* IGN.py - Permite obtener un MDT (Modelo digital del terreno) de una determinada localización y procesarlo de diferentes maneras.
+* MODIS.py - Este archivo contiene métodos que permiten extraer datos de los servicios web del satélite MODIS:
 
-## Useful links 
+## Links 
 Remove this section if it is not needed.
 
-[Publication](www.github.com)  
-[Additional link](www.github.com)  
-[Additional link](www.github.com)
+[Richdem](https://richdem.readthedocs.io/en/latest)  
+[Incendios forestales en España](https://www.mapa.gob.es/es/desarrollo-rural/estadisticas/Incendios_default.aspx)  
+[AEMET](http://www.aemet.es/es/eltiempo/prediccion/incendios)
 
-## Contributors
+## Agradecimientos
 
-Include a section for credits in order to highlight and link to the authors of your project. 
-Apart from listing contacts of specific people involved in the project, aslo include the general email to the ONS Big Data project
+A [CIVIO](https://civio.es/) por obtener y compartir los datos que se han usado como base para la realización del modelo.
 
-## License
-
-MIT? OGL?
