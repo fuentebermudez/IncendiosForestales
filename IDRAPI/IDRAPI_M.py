@@ -82,7 +82,3 @@ def get_superficie_quemada(AemetToken,lat,lng,id_estacion_meteorologica,path_mod
 def open_url_map(lat,lng):
     webbrowser.open_new_tab("https://www.google.com/maps/@?api=1&map_action=map&center=" + lat + "," + lng+"&zoom=15&basemap=terrain")
 
-#sup=get_superficie_quemada(token,'42.954656','-2.325719','1475X')
-#print(sup)
-
-#open_url_map()
